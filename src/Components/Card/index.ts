@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-interface Props {
+type Props = {
     bg: string;
-    
 }
 
 export default Card = styled.div<Props>`
