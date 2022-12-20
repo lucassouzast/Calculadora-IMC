@@ -10,7 +10,7 @@ export const RightSide = () => {
                 <div className='shadow'>
                     <img src={down} alt="" />
                 </div>
-                <h1>Magreza</h1>
+                <h1>MARIO DUNDA</h1>
                 <p>IMC esta entre 0 e 18.5</p>
             </Card>
             
