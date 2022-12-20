@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Body = styled.div`
     margin: 0 auto;
     display: flex;
     min-width: 320px;

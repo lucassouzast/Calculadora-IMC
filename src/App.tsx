@@ -6,10 +6,10 @@ import {RightSide} from './Components/RightSide'
 function App() {
 
   return (
-    <C.Container>
+    <C.Body>
       <LeftSide/>
       <RightSide/>
-    </C.Container>
+    </C.Body>
   )
 }
 
