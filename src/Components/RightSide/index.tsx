@@ -1,7 +1,7 @@
 import * as C from './style'
 import up from '../../img/up.png'
 import down from '../../img/down.png'
-import Card from '../Card'
+import Card from '../Card/index'
 
 export const RightSide = () => {
     return (
