@@ -4,13 +4,18 @@ import down from '../../img/down.png'
 import Card from '../Card/index'
 
 export const RightSide = () => {
+
+    const cards = [
+        {bg: "", title: '', subTitle: ''}
+    ]
+
     return (
         <C.Container>
             <Card bg={'#97A2AC'}>
                 <div className='shadow'>
                     <img src={down} alt="" />
                 </div>
-                <h1>MARIO DUNDA</h1>
+                <h1>Magreza</h1>
                 <p>IMC esta entre 0 e 18.5</p>
             </Card>
             

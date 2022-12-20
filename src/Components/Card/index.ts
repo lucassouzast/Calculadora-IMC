@@ -4,11 +4,11 @@ type Props = {
     bg: string;
 }
 
-export default Card = styled.div<Props>`
+const Card = styled.div<Props>`
     border-radius:15px;
     text-align: center;
     color: #fff;
-    background-color: ${p => p.bg}
+    background-color: ${p => p.bg};
 
     .shadow{
         display: flex;
@@ -26,3 +26,4 @@ export default Card = styled.div<Props>`
     }
 
 `
+export default Card;
