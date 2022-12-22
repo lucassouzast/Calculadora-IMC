@@ -58,7 +58,7 @@ export const ImcCalc = ({ Level, Verify }: Props) => {
             type="number"
             className="weightInput"
             required
-            placeholder="peso"
+            placeholder="Insira seu altura ex: 173"
             value={inputWeight > 0 ? inputWeight : ""}
             onChange={(e) => setInputWeight(parseFloat(e.target.value))}
             disabled={disabled ? true : false}
