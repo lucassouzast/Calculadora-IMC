@@ -30,7 +30,7 @@ export const SectionImc = () => {
     {
       bg: "#E3B03B",
       title: "Sobre Peso",
-      subTitle: "IMC esta entre 24.9 e 30",
+      subTitle: `IMC esta entre 24.9 e 30`,
       imgUp: false,
     },
     {
@@ -43,8 +43,10 @@ export const SectionImc = () => {
 
   const [level, setLevel] = useState(0);
   const [shown, setShown] = useState(false);
-
-  const degree = (levelNumber: number) => {
+  const [imcResult, setImcResult] = useState(0);
+  
+  const degree = (levelNumber: number, result: number) => {
+    setImcResult(result)
     setLevel(levelNumber);
     setShown(true)
   };
@@ -78,7 +80,7 @@ export const SectionImc = () => {
                   <img src={cards[level].imgUp ? up : down} className= "up" />
                 </div>
                 <h1>{cards[level].title}</h1>
-                <p>{cards[level].subTitle}</p>
+                <p>Seu IMC é {Number((imcResult).toFixed(1))}</p>
               </C.Card>
           </C.ImcResult>
         ) : (

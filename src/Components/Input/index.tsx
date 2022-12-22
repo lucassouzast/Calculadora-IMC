@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import * as C from "./style";
-import React from 'react';
-import InputMask, { ReactInputMask } from "react-input-mask";
 
 type Props = {
-  Level: (degree: number) => void;
+  Level: (degree: number,Result: number) => void;
   Verify: boolean;
+
 };
-
-const Input = (props:any) => (
-    <InputMask mask="99999-999" value={props.value} onChange={props.onChange} />
-  );
-
 
 export const ImcCalc = ({ Level, Verify }: Props) => {
   const [inputHeight, setInputHeight] = useState<number>(0);
@@ -23,17 +17,16 @@ export const ImcCalc = ({ Level, Verify }: Props) => {
     setDisabled(true);
     setInputHeight(0)
     setInputWeight(0)
-
     if (result <= 18.5) {
-      return Level(0);
+      return Level(0, result);
     }
     if (result > 16.5 && result <= 24.9) {
-      return Level(1);
+      return Level(1, result);
     }
     if (result > 24.9 && result <= 30) {
-      return Level(2);
+      return Level(2, result);
     } else {
-      return Level(3);
+      return Level(3, result);
     }
   };
   useEffect(() => {
@@ -46,7 +39,6 @@ export const ImcCalc = ({ Level, Verify }: Props) => {
         <input
             type="number"
             className="ageInput"
-            required
             placeholder="Insira sua altura ex: 173"
             value={inputHeight > 0 ? inputHeight : ""}
             onChange={(e) => setInputHeight(parseFloat(e.target.value))}
@@ -55,10 +47,9 @@ export const ImcCalc = ({ Level, Verify }: Props) => {
         <br />
 
         <input
-            type="number"
             className="weightInput"
             required
-            placeholder="Insira seu altura ex: 173"
+            placeholder="Insira seu peso ex: 82Kg"
             value={inputWeight > 0 ? inputWeight : ""}
             onChange={(e) => setInputWeight(parseFloat(e.target.value))}
             disabled={disabled ? true : false}
