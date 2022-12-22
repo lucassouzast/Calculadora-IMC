@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const InputArea = styled.div`
+export const InputArea = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -19,6 +19,9 @@ const InputArea = styled.div`
     input::-webkit-outer-spin-button, ::-webkit-inner-spin-button{
         -webkit-appearance: none;
     }
+    :disabled{
+      color: #ccc;
+    }
   }
 
   button{
@@ -33,5 +36,3 @@ const InputArea = styled.div`
     cursor: pointer;
   }
 `;
-
-export default InputArea

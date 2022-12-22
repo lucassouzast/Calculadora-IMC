@@ -1,16 +1,12 @@
 import * as C from './App.Styles'
-import {LeftSide} from './Components/LeftSide'
-import {RightSide} from './Components/RightSide'
-
+import {SectionImc} from './Components/ImcSection'
 
 function App() {
 
   return (
     <C.Body>
-      <LeftSide/>
-      <RightSide/>
+      <SectionImc/>
     </C.Body>
   )
 }
-
 export default App
